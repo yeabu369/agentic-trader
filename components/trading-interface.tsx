@@ -52,8 +52,6 @@ export default function TradingInterface() {
           <Tabs defaultValue="spot">
             <TabsList className="bg-gray-800">
               <TabsTrigger value="spot" className="data-[state=active]:bg-gray-700 data-[state=active]:text-white">Spot</TabsTrigger>
-              <TabsTrigger value="margin" className="data-[state=active]:bg-gray-700 data-[state=active]:text-white">Margin</TabsTrigger>
-              <TabsTrigger value="futures" className="data-[state=active]:bg-gray-700 data-[state=active]:text-white">Futures</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
