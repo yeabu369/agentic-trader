@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowLeftRight, Clock, Lock, Wallet } from 'lucide-react'
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 export default function TradingInterface() {
   const [messages, setMessages] = useState<Array<{role: string, content: string}>>([])
@@ -34,6 +35,10 @@ export default function TradingInterface() {
     setInput('')
   }
 
+  const handleWalletConnect = (e: React.ButtonEvent) => {
+    console.log("Button :>> Connect Wallet Button Clicked");
+  }
+
   if (typeof window === 'undefined') {
     return null
   }
@@ -52,13 +57,15 @@ export default function TradingInterface() {
             </TabsList>
           </Tabs>
         </div>
-        <Button 
-          variant="outline" 
-          className="gap-2 bg-blue-600 text-white border-blue-500 hover:bg-blue-700 hover:border-blue-600"
-        >
-          <Wallet className="w-4 h-4" />
-          Connect Wallet
-        </Button>
+
+        <div className="flex space-x-2 border">
+          <WalletMultiButton
+            className="gap-2 bg-blue-600 text-white border-blue-500 hover:bg-blue-700 hover:border-blue-600"
+          >
+            <Wallet className="w-4 h-4" />
+            Connect Wallet
+          </WalletMultiButton>
+        </div>
       </nav>
 
       {/* Centered AI Trading Assistant */}

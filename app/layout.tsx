@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AppWalletProvider from "@/components/AppWalletProvider.tsx";
 
 export const metadata: Metadata = {
-  title: 'v0 App',
+  title: 'Agentic Trader',
   description: 'Created with v0',
 }
 
@@ -13,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AppWalletProvider>{children}</AppWalletProvider>
+      </body>
     </html>
   )
 }
