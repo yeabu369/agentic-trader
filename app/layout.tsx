@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import AppWalletProvider from "@/components/AppWalletProvider.tsx";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: 'Agentic Trader',
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppWalletProvider>{children}</AppWalletProvider>
+        <AppWalletProvider>
+          {children}
+          <Analytics />
+        </AppWalletProvider>
       </body>
     </html>
   )
