@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: 'Agentic Trader',
-  description: 'Created with v0',
+  description: 'Trade onChain with words',
 }
 
 export default function RootLayout({
