@@ -13,7 +13,7 @@ export default function TradingInterface() {
 
   useEffect(() => {
     setMessages([
-      {role: 'assistant', content: 'Hello! I can help you trade. Try commands like "Buy 100 SOL" or "Swap 50 $TRUMPE for SOL"'}
+      {role: 'assistant', content: 'Hello! I can help you trade. Try commands like "Buy 100 SOL" or "Swap 50 SOL for $TRUMP"'}
     ])
   }, [])
 
